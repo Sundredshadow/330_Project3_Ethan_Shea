@@ -73,7 +73,7 @@ function loadPokemon(){
             {
                 let path = 'pokemon/' + searched;//use tempsearch since search is reset in loadPokemon
                 firebase.database().ref(path).set(firebase.database.ServerValue.increment(1));
-                fire.initFirebase();
+                firebase.database().ref("pokemon").on("value", fire.getMostSearched, fire.firebaseError);
             }
             searched="";
         }
@@ -133,7 +133,7 @@ function setUpHandlers()
         searchoffset.value=1;
         pokemonID.innerHTML="";
         content.innerHTML="";
-        fire.initFirebase();
+        firebase.database().ref("pokemon").on("value", fire.getMostSearched, fire.firebaseError);
     }
 
     showPokemon.onclick = (e)=>{

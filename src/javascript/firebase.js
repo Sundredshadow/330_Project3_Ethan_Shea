@@ -39,4 +39,4 @@ function getMostSearched(data)
 function firebaseError(error){
     console.log(error);
 }
-export {initFirebase};
+export {initFirebase,getMostSearched,firebaseError};
