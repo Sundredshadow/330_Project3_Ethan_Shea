@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/SigmarOne-Regular.ttf");
+}
+*{
+    margin:0;
+    padding:0;
+}
+body
+{
+    background-color: rgb(255, 5, 5);
+    font-family: "myFont",'Courier New', Courier, monospace;
+    display:block;
+    /*try to mimic pokemon font color*/
+    color:rgb(255,203,5);
+    text-shadow:1px 2px #3D7DCA,-1px 2px #003A70;
+}
+#title
+{
+    background-color: #003A70;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1
+{
+    display:block;
+    margin:auto;
+}
+#searchBar
+{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin:auto;
+}
+#content{
+    background-color: #003A70;
+    border: 1px solid black;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin:auto;
+}
+.topRow
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.importantInfo, .sprites, .additionalInfo
+{
+    background-color: #3D7DCA;
+    border: 1px solid black;
+    margin:25px;
+}
+.importantInfo
+{
+    display: flex;
+    width:60%;
+    flex-direction:column;
+    justify-content: center;
+    min-height:200px;
+    text-decoration: underline;
+}
+.sprites
+{
+    background-color: white;
+    width:40%;
+    min-height:200px;
+}
+.pokemonIMGs{
+    display:flex;
+    margin:auto;
+    justify-self: center;
+    align-self: center;
+    min-width: 50%;
+}
+
+.stats{
+    display:flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+}
+.stat
+{
+    width:15%;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+}
+.moveInfo, .abilityInfo{
+    padding-left: 65px;
+}
+
+hr
+{
+    height:1px;
+    background-color: rgb(255,203,5);
+    border: none;
+}
+#pokemonID,#mostSearched
+{
+    margin:auto;
+    text-align:center;
+}
