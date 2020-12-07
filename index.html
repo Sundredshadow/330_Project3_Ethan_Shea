@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>View a pokemon</title>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+	<script src="./src/javascript/loader.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div id="title">
+        <h1>Pokemon Info</h1>
+        <hr><hr>
+        <div id="searchBar">
+            Search Queries:
+            <select id="generation">
+                <option value="generation-i" selected>Generation 1</option>
+                <option value="generation-ii">Generation 2</option>
+                <option value="generation-iii">Generation 3</option>
+                <option value="generation-iv">Generation 4</option>
+                <option value="generation-v">Generation 5</option>
+                <option value="generation-vi">Generation 6</option>
+                <option value="generation-vii">Generation 7</option>
+            </select>
+            <select id=game>
+                <option value="red-blue" selected>red-blue</option>
+                <option value="yellow">yellow</option>
+            </select>
+            <select id=dex>
+                <option value="regional">generation-unique</option>
+                <option value="national" selected>national</option>
+            </select>
+            <button id="showPokemon">Search via gen/dex</button>
+            <button id="prevPokemon">Prev Pokemon</button>
+            <button id="nextPokemon">Next Pokemon</button>
+            Search Quantity
+            <select id=searchlimit>
+                <option value=1 selected>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=5>5</option>
+                <option value=10>10</option>
+            </select>
+            Search Offset
+            <select id=searchoffset>
+                <option value=1 selected>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=5>5</option>
+                <option value=10>10</option>
+            </select>
+            <input type="text" id=searchBox>
+            <button id="searchViaPokemon">Search via pokemon/ID national</button>
+            <button id=reset>Reset</button>
+        </div>
+        <hr><hr>
+    </div>
+    <p id=mostSearched></p>
+    <p id=pokemonID></p>
+	<div id="content">
+	
+    </div>
+</body>
+</html>
